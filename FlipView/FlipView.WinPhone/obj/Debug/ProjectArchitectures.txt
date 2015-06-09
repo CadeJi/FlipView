@@ -1,0 +1,2 @@
+D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\FlipView.WinPhone.csproj;neutral
+D:\NET\Xamarin\FlipView\FlipView\FlipView\FlipView.csproj;neutral

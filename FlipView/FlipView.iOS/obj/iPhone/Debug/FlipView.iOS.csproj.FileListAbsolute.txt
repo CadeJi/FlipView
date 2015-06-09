@@ -1,0 +1,15 @@
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\FlipViewiOS.exe
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\FlipViewiOS.pdb
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\FlipView.dll
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\Xamarin.Forms.Core.dll
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\Xamarin.Forms.Platform.dll
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\Xamarin.Forms.Platform.iOS.dll
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\Xamarin.Forms.Xaml.dll
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\FlipView.pdb
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\Xamarin.Forms.Core.xml
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\Xamarin.Forms.Xaml.xml
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\obj\iPhone\Debug\
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\obj\iPhone\Debug\FlipView.iOS.csprojResolveAssemblyReference.cache
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\obj\iPhone\Debug\FlipViewiOS.exe
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\obj\iPhone\Debug\FlipViewiOS.pdb
+D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\FlipView.dll.mdb

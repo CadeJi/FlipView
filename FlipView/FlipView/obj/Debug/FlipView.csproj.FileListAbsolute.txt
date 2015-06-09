@@ -1,0 +1,9 @@
+D:\NET\Xamarin\FlipView\FlipView\FlipView\bin\Debug\FlipView.dll
+D:\NET\Xamarin\FlipView\FlipView\FlipView\bin\Debug\FlipView.pdb
+D:\NET\Xamarin\FlipView\FlipView\FlipView\bin\Debug\Xamarin.Forms.Core.dll
+D:\NET\Xamarin\FlipView\FlipView\FlipView\bin\Debug\Xamarin.Forms.Platform.dll
+D:\NET\Xamarin\FlipView\FlipView\FlipView\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\NET\Xamarin\FlipView\FlipView\FlipView\bin\Debug\Xamarin.Forms.Core.xml
+D:\NET\Xamarin\FlipView\FlipView\FlipView\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\NET\Xamarin\FlipView\FlipView\FlipView\obj\Debug\FlipView.dll
+D:\NET\Xamarin\FlipView\FlipView\FlipView\obj\Debug\FlipView.pdb

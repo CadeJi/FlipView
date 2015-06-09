@@ -1,0 +1,1 @@
+D:\NET\Xamarin\FlipView\FlipView\FlipView.Droid\obj\Debug\FlipView.Droid.csprojResolveAssemblyReference.cache
