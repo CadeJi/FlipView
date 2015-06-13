@@ -1,10 +1,3 @@
-D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.csprojResolveAssemblyReference.cache
-D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\App.g.cs
-D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\Controls\FlipView.g.cs
-D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\MainPage.g.cs
-D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.g.resources
-D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.Resources.AppResources.resources
-D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.csproj.GenerateResource.Cache
 D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\SplashScreenImage.jpg
 D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\Assets\ApplicationIcon.png
 D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
@@ -90,6 +83,12 @@ D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\ko\System.Windows.I
 D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\ru\System.Windows.Interactivity.resources.dll
 D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.csprojResolveAssemblyReference.cache
+D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\App.g.cs
+D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\MainPage.g.cs
+D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.g.resources
+D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.Resources.AppResources.resources
+D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.csproj.GenerateResource.Cache
 D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.dll
 D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.pdb
 D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\priconfig.xml
