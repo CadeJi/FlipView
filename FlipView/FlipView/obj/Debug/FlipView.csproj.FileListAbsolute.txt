@@ -7,3 +7,5 @@ D:\NET\Xamarin\FlipView\FlipView\FlipView\bin\Debug\Xamarin.Forms.Core.xml
 D:\NET\Xamarin\FlipView\FlipView\FlipView\bin\Debug\Xamarin.Forms.Xaml.xml
 D:\NET\Xamarin\FlipView\FlipView\FlipView\obj\Debug\FlipView.dll
 D:\NET\Xamarin\FlipView\FlipView\FlipView\obj\Debug\FlipView.pdb
+D:\NET\Xamarin\FlipView\FlipView\FlipView\obj\Debug\FlipView.csprojResolveAssemblyReference.cache
+D:\NET\Xamarin\FlipView\FlipView\FlipView\obj\Debug\Page1.xaml.g.cs

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctrls="clr-namespace:FlipView.Controls;assembly=FlipView"
+             x:Class="FlipView.Page1">
+
+
+  <StackLayout>
+
+    <ctrls:Flip WidthRequest="300" HeightRequest="150"
+                ItemsSource="{Binding Imgs}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                >
+      <ctrls:Flip.ItemTemplate>
+        <DataTemplate>
+          <Image Source="{Binding .}" />
+        </DataTemplate>
+      </ctrls:Flip.ItemTemplate>
+    </ctrls:Flip>
+  </StackLayout>
+
+</ContentPage>

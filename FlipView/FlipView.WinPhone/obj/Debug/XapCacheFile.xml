@@ -1,6 +1,6 @@
-﻿<xapCache source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\FlipView.WinPhone_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2015/6/14 3:11:02">
-  <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="2015/6/14 0:15:31" />
-  <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.dll" archivePath="FlipView.WinPhone.dll" lastWriteTime="2015/6/14 3:11:01" />
+﻿<xapCache source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\FlipView.WinPhone_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2015/6/14 22:22:28">
+  <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="2015/6/14 22:22:27" />
+  <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\FlipView.WinPhone.dll" archivePath="FlipView.WinPhone.dll" lastWriteTime="2015/6/14 22:22:27" />
   <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Assets\BadgeLogo.png" archivePath="Assets\BadgeLogo.png" lastWriteTime="2015/6/9 10:43:43" />
   <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Assets\Logo.png" archivePath="Assets\Logo.png" lastWriteTime="2015/6/9 10:43:43" />
   <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Assets\SplashScreen.png" archivePath="Assets\SplashScreen.png" lastWriteTime="2015/6/9 10:43:43" />
@@ -23,7 +23,7 @@
   <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2015/6/14 0:06:06" />
   <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="2015/6/8 10:29:37" />
   <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="2015/6/8 10:29:37" />
-  <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView\bin\Debug\FlipView.dll" archivePath="FlipView.dll" lastWriteTime="2015/6/14 0:06:04" />
+  <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView\bin\Debug\FlipView.dll" archivePath="FlipView.dll" lastWriteTime="2015/6/14 22:20:52" />
   <file source="D:\NET\Xamarin\FlipView\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="2015/6/8 10:29:40" />
   <file source="D:\NET\Xamarin\FlipView\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Core.dll" archivePath="Xamarin.Forms.Core.dll" lastWriteTime="2015/6/8 11:40:16" />
   <file source="D:\NET\Xamarin\FlipView\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Platform.dll" archivePath="Xamarin.Forms.Platform.dll" lastWriteTime="2015/6/8 11:40:16" />
@@ -33,6 +33,6 @@
   <file source="D:\NET\Xamarin\FlipView\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Core.xml" archivePath="Xamarin.Forms.Core.xml" lastWriteTime="2015/6/8 11:40:16" />
   <file source="D:\NET\Xamarin\FlipView\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Xaml.xml" archivePath="Xamarin.Forms.Xaml.xml" lastWriteTime="2015/6/8 11:40:16" />
   <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2015/6/14 0:06:06" />
-  <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="2015/6/14 3:11:02" />
-  <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="2015/6/14 0:15:31" />
+  <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="2015/6/14 22:22:28" />
+  <file source="D:\NET\Xamarin\FlipView\FlipView\FlipView.WinPhone\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="2015/6/14 22:22:27" />
 </xapCache>

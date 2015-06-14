@@ -9,6 +9,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.WinPhone;
 
 namespace FlipView.WinPhone.Controls {
 
@@ -98,6 +100,7 @@ namespace FlipView.WinPhone.Controls {
             e.Handled = true;
         }
 
+
         #region
         protected override bool IsItemItsOwnContainerOverride(object item) {
             return false;
@@ -112,8 +115,10 @@ namespace FlipView.WinPhone.Controls {
 
         //protected override void PrepareContainerForItemOverride(DependencyObject element, object item) {
         //    var ct = (ContentControl)element;
-        //    ct.ContentTemplate = this.ItemTemplate;
+        //    var render = RendererFactory.GetRenderer((View)item) as IVisualElementRenderer;
+        //    ct.Content = render;
         //}
+
         #endregion
     }
 }

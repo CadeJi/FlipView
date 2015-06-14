@@ -1,11 +1,14 @@
 ﻿using FlipView.Controls;
 using FlipView.WinPhone.Render;
+using Microsoft.Phone.Controls;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Markup;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.WinPhone;
 
@@ -14,20 +17,18 @@ using Xamarin.Forms.Platform.WinPhone;
 namespace FlipView.WinPhone.Render {
     public class FlipViewRender : ViewRenderer<Flip, Controls.FlipView> {
 
-        protected override void OnElementChanged(ElementChangedEventArgs<Flip> e) {
+          protected override void OnElementChanged(ElementChangedEventArgs<Flip> e) {
             base.OnElementChanged(e);
 
             var fv = new Controls.FlipView();
-            //fv.SetBinding(Controls.FlipView.OrientationProperty, new System.Windows.Data.Binding("Orientation"));
-            //fv.SetBinding(Controls.FlipView.ItemsSourceProperty, new System.Windows.Data.Binding("ItemsSource"));
-            //fv.SetBinding(Controls.FlipView.WidthProperty, new System.Windows.Data.Binding("WidthRequest"));
-            //fv.SetBinding(Controls.FlipView.HeightProperty, new System.Windows.Data.Binding("HeightRequest"));
-            //fv.DataContext = this.Element.BindingContext;
 
             fv.Orientation = System.Windows.Controls.Orientation.Horizontal;
-            fv.ItemsSource = this.Element.ItemsSource;
+            //fv.ItemsSource = this.Element.ItemsSource;
+            fv.ItemsSource = this.Element.Children;
             fv.Height = this.Element.HeightRequest;
             fv.Width = this.Element.WidthRequest;
+
+            //fv.ItemTemplate = (System.Windows.DataTemplate)System.Windows.Application.Current.Resources["FlipViewItem"];
 
             this.SetNativeControl(fv);
         }
