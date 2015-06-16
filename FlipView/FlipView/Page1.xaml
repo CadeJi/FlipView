@@ -5,16 +5,16 @@
              x:Class="FlipView.Page1">
 
 
-  <StackLayout>
+  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
-    <ctrls:Flip WidthRequest="300" HeightRequest="150"
+    <ctrls:Flip WidthRequest="400" HeightRequest="250"
                 ItemsSource="{Binding Imgs}"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 >
       <ctrls:Flip.ItemTemplate>
         <DataTemplate>
-          <Image Source="{Binding .}" />
+          <Image Source="{Binding .}" Aspect="AspectFill" />
         </DataTemplate>
       </ctrls:Flip.ItemTemplate>
     </ctrls:Flip>

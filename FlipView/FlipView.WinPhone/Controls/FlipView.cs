@@ -113,11 +113,14 @@ namespace FlipView.WinPhone.Controls {
             };
         }
 
-        //protected override void PrepareContainerForItemOverride(DependencyObject element, object item) {
-        //    var ct = (ContentControl)element;
-        //    var render = RendererFactory.GetRenderer((View)item) as IVisualElementRenderer;
-        //    ct.Content = render;
-        //}
+        protected override void PrepareContainerForItemOverride(DependencyObject element, object item) {
+            var ct = (ContentControl)element;
+            var render = RendererFactory.GetRenderer((View)item) as IVisualElementRenderer;
+            //render.Element.WidthRequest = 100;
+            //render.Element.HeightRequest = 100;
+            render.Element.Layout(new Rectangle(0, 0, this.Width, this.Height));
+            ct.Content = render;
+        }
 
         #endregion
     }
