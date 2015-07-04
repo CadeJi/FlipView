@@ -5,19 +5,22 @@
              x:Class="FlipView.Page1">
 
 
-  <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-    
-    <ctrls:Flip WidthRequest="400" HeightRequest="250"
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+        <!--<BoxView WidthRequest="300" HeightRequest="150" Color="Red" />-->
+        
+        <ctrls:Flip WidthRequest="300" HeightRequest="150"
                 ItemsSource="{Binding Imgs}"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 >
-      <ctrls:Flip.ItemTemplate>
-        <DataTemplate>
-          <Image Source="{Binding .}" Aspect="AspectFill" />
-        </DataTemplate>
-      </ctrls:Flip.ItemTemplate>
-    </ctrls:Flip>
-  </StackLayout>
+            <ctrls:Flip.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding .}" Aspect="AspectFill" />
+                    <!--<Button Text="AAA" />-->
+                </DataTemplate>
+            </ctrls:Flip.ItemTemplate>
+        </ctrls:Flip>
+    </StackLayout>
 
 </ContentPage>

@@ -14,6 +14,8 @@ using FlipView.Controls;
 using Xamarin.Forms;
 using FlipView.Droid.Renders;
 using System.Diagnostics;
+using Android.Graphics.Drawables;
+using Android.Graphics.Drawables.Shapes;
 
 [assembly: ExportRenderer(typeof(Flip), typeof(FlipViewRender))]
 namespace FlipView.Droid.Renders {
@@ -56,7 +58,7 @@ namespace FlipView.Droid.Renders {
             root.SetBackgroundColor(Color.Yellow.ToAndroid());
 
             var scroller = new HorizontalScrollView(this.Context);
-            root.AddView(scroller);
+            root.AddView(scroller, new Android.Widget.RelativeLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent));
             scroller.SetBackgroundColor(Color.Green.ToAndroid());
 
             this.Container = new Android.Widget.LinearLayout(this.Context);
@@ -67,7 +69,7 @@ namespace FlipView.Droid.Renders {
 
             this.PointsContainer = new LinearLayout(this.Context);
             this.PointsContainer.Orientation = Orientation.Horizontal;
-            this.PointsContainer.TextAlignment = Android.Views.TextAlignment.Center;
+            //this.PointsContainer. = Android.Views.TextAlignment.Center;
 
             var lp = new Android.Widget.RelativeLayout.LayoutParams(LayoutParams.WrapContent, 20);
             lp.AddRule(LayoutRules.AlignParentBottom);
@@ -99,27 +101,48 @@ namespace FlipView.Droid.Renders {
             }
         }
 
+        //Î´Ö´ÐÐ
+        //public override SizeRequest GetDesiredSize(int widthConstraint, int heightConstraint) {
+        //    this.Measure(widthConstraint, heightConstraint);
+        //    var w = this.MeasuredWidth;
+        //    return base.GetDesiredSize(widthConstraint, heightConstraint);
+        //}
+
+
         private void Snap() {
             Console.WriteLine(this.Idx);
         }
 
         private void SetItems() {
             this.Container.RemoveAllViewsInLayout();
+            var density = this.Context.Resources.DisplayMetrics.Density;
+            var w = this.Element.WidthRequest * density;
+            var h = this.Element.HeightRequest * density;
+
             foreach (var v in this.Element.Children) {
                 var render = RendererFactory.GetRenderer(v);
-                //this.Container.AddView(render.ViewGroup, new LinearLayout.LayoutParams((int)this.Element.WidthRequest, (int)this.Element.HeightRequest));
-                this.Container.AddView(render.ViewGroup, new LinearLayout.LayoutParams((int)this.Element.WidthRequest, LayoutParams.MatchParent));
+
+                var c = new Android.Widget.FrameLayout(this.Context);
+                c.SetBackgroundColor(Color.Blue.ToAndroid());
+                c.AddView(render.ViewGroup);
+                this.Container.AddView(c, (int)w, (int)h);
             }
             this.Count = this.Element.Children.Count();
         }
 
         private void SetPoints() {
-            var lp = new LinearLayout.LayoutParams(15, 15);
+            var lp = new LinearLayout.LayoutParams(10, 10);
             lp.LeftMargin = 5;
             lp.RightMargin = 5;
+
+            var shape = new OvalShape();
+            shape.Resize(10, 10);
+            var dr = new ShapeDrawable(shape);
+            dr.Paint.Color = Color.White.ToAndroid();
+
             for (var i = 0; i < this.Count; i++) {
                 var v = new Android.Views.View(this.Context);
-                v.SetBackgroundColor(Color.White.ToAndroid());
+                v.SetBackgroundDrawable(dr);
 
                 this.PointsContainer.AddView(v, lp);
             }
