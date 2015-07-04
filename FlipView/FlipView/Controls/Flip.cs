@@ -65,20 +65,5 @@ namespace FlipView.Controls {
 
             this.Children = children;
         }
-
-        protected override SizeRequest OnSizeRequest(double widthConstraint, double heightConstraint) {
-            double widthRequest = this.WidthRequest;
-            double heightRequest = this.HeightRequest;
-            SizeRequest sizeRequest = new SizeRequest();
-            if ((widthRequest == -1.0 || heightRequest == -1.0))
-                sizeRequest = this.GetSizeRequest(widthConstraint, heightConstraint);
-            return new SizeRequest() {
-                Request = new Size() {
-                    Width = widthRequest != -1.0 ? widthRequest : sizeRequest.Request.Width,
-                    Height = heightRequest != -1.0 ? heightRequest : sizeRequest.Request.Height
-                },
-                Minimum = sizeRequest.Minimum
-            };
-        }
     }
 }

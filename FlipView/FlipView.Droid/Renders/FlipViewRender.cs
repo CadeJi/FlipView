@@ -40,19 +40,10 @@ namespace FlipView.Droid.Renders {
 
         protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e) {
             base.OnElementPropertyChanged(sender, e);
-
-            switch (e.PropertyName) {
-                case "Width":
-                case "Height":
-                    break;
-            }
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Flip> e) {
             base.OnElementChanged(e);
-
-            var width = (int)this.Element.WidthRequest;
-            var height = (int)this.Element.HeightRequest;
 
             var root = new Android.Widget.RelativeLayout(this.Context);
             root.SetBackgroundColor(Color.Yellow.ToAndroid());
@@ -79,9 +70,6 @@ namespace FlipView.Droid.Renders {
             this.SetNativeControl(root);
             root.Invalidate();
             root.RequestLayout();
-
-            this.SetItems();
-            this.SetPoints();
         }
 
         void scroller_Touch(object sender, Android.Views.View.TouchEventArgs e) {
@@ -113,11 +101,12 @@ namespace FlipView.Droid.Renders {
             Console.WriteLine(this.Idx);
         }
 
-        private void SetItems() {
+        private void SetItems(int width, int height) {
             this.Container.RemoveAllViewsInLayout();
-            var density = this.Context.Resources.DisplayMetrics.Density;
-            var w = this.Element.WidthRequest * density;
-            var h = this.Element.HeightRequest * density;
+            //Form 中的大小转换到 Android 下, 要跟据 密度(Density) 转换, 最终结果可能并不是 Form 中指定的
+            //var density = this.Context.Resources.DisplayMetrics.Density;
+            //var w = this.Element.WidthRequest * density;
+            //var h = this.Element.HeightRequest * density;
 
             foreach (var v in this.Element.Children) {
                 var render = RendererFactory.GetRenderer(v);
@@ -125,9 +114,17 @@ namespace FlipView.Droid.Renders {
                 var c = new Android.Widget.FrameLayout(this.Context);
                 c.SetBackgroundColor(Color.Blue.ToAndroid());
                 c.AddView(render.ViewGroup);
-                this.Container.AddView(c, (int)w, (int)h);
+                this.Container.AddView(c, width, height);
             }
             this.Count = this.Element.Children.Count();
+        }
+
+        protected override void OnLayout(bool changed, int l, int t, int r, int b) {
+            base.OnLayout(changed, l, t, r, b);
+            if (changed) {
+                this.SetItems(r, b);
+                this.SetPoints();
+            }
         }
 
         private void SetPoints() {
