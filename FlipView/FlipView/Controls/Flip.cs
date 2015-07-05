@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -64,6 +65,14 @@ namespace FlipView.Controls {
             }
 
             this.Children = children;
+        }
+
+        protected override void OnSizeAllocated(double width, double height) {
+            base.OnSizeAllocated(width, height);
+
+            foreach (var c in this.Children) {
+                c.Layout(new Rectangle(0, 0, width, height));
+            }
         }
     }
 }

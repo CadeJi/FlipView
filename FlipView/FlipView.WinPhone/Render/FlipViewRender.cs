@@ -17,7 +17,7 @@ using Xamarin.Forms.Platform.WinPhone;
 namespace FlipView.WinPhone.Render {
     public class FlipViewRender : ViewRenderer<Flip, Controls.FlipView> {
 
-          protected override void OnElementChanged(ElementChangedEventArgs<Flip> e) {
+        protected override void OnElementChanged(ElementChangedEventArgs<Flip> e) {
             base.OnElementChanged(e);
 
             var fv = new Controls.FlipView();
@@ -25,8 +25,8 @@ namespace FlipView.WinPhone.Render {
             fv.Orientation = System.Windows.Controls.Orientation.Horizontal;
             //fv.ItemsSource = this.Element.ItemsSource;
             fv.ItemsSource = this.Element.Children;
-            fv.Height = this.Element.HeightRequest;
-            fv.Width = this.Element.WidthRequest;
+            //fv.Height = this.Element.HeightRequest;
+            //fv.Width = this.Element.WidthRequest;
 
             //fv.ItemTemplate = (System.Windows.DataTemplate)System.Windows.Application.Current.Resources["FlipViewItem"];
 
@@ -38,8 +38,21 @@ namespace FlipView.WinPhone.Render {
 
             Debug.WriteLine(e.PropertyName);
 
-            if (e.PropertyName.Equals(Flip.OpacityProperty.PropertyName))
-                this.Control.Orientation = (System.Windows.Controls.Orientation)((int)this.Element.Orientation);
+            switch (e.PropertyName) {
+                case "Width":
+                    this.Control.Width = this.Element.Width;
+                    break;
+                case "Height":
+                    this.Control.Height = this.Element.Height;
+                    break;
+                case "Orientation":
+                    this.Control.Orientation = (System.Windows.Controls.Orientation)((int)this.Element.Orientation);
+                    break;
+            }
+        }
+
+        public override SizeRequest GetDesiredSize(double widthConstraint, double heightConstraint) {
+            return base.GetDesiredSize(widthConstraint, heightConstraint);
         }
 
     }

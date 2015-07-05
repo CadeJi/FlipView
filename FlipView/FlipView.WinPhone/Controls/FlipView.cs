@@ -101,6 +101,8 @@ namespace FlipView.WinPhone.Controls {
         }
 
 
+
+
         #region
         protected override bool IsItemItsOwnContainerOverride(object item) {
             return false;
@@ -108,18 +110,26 @@ namespace FlipView.WinPhone.Controls {
 
         protected override DependencyObject GetContainerForItemOverride() {
             return new ContentControl() {
-                Width = this.Width,
-                Height = this.Height
+                Background = new SolidColorBrush(Colors.Purple)
             };
         }
 
         protected override void PrepareContainerForItemOverride(DependencyObject element, object item) {
             var ct = (ContentControl)element;
-            var render = RendererFactory.GetRenderer((View)item) as IVisualElementRenderer;
-            //render.Element.WidthRequest = 100;
-            //render.Element.HeightRequest = 100;
-            render.Element.Layout(new Rectangle(0, 0, this.Width, this.Height));
-            ct.Content = render;
+            var render = RendererFactory.GetRenderer((View)item);
+            ct.Content = render;//render == render.ContainerElement;
+        }
+
+        //protected override System.Windows.Size ArrangeOverride(System.Windows.Size finalSize) {
+        //    foreach (var item in this.Items) {
+        //        var v = (View)item;
+        //        v.Layout(new Rectangle(0, 0, finalSize.Width, finalSize.Height));
+        //    }
+        //    return base.ArrangeOverride(finalSize);
+        //}
+
+        protected override System.Windows.Size MeasureOverride(System.Windows.Size availableSize) {
+            return base.MeasureOverride(availableSize);
         }
 
         #endregion

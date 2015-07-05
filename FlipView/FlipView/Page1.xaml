@@ -7,16 +7,18 @@
 
   <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
-    <!--<BoxView WidthRequest="300" HeightRequest="150" Color="Red" />-->
-
-    <ctrls:Flip
-            ItemsSource="{Binding Imgs}"
-            HeightRequest="300"
-                >
+    <ctrls:Flip ItemsSource="{Binding Imgs}" HeightRequest="200">
       <ctrls:Flip.ItemTemplate>
         <DataTemplate>
-          <Image Source="{Binding .}" Aspect="AspectFill" />
-          <!--<Button Text="AAA" />-->
+          <!--<Image Source="{Binding .}" Aspect="AspectFill" />-->
+          <Grid>
+            <Image Source="{Binding Key}" Aspect="AspectFill" />
+            <Label Text="{Binding Value}" TextColor="White" />
+          </Grid>
+          <!--<StackLayout>
+            <Image Source="{Binding .}" Aspect="AspectFill" />
+            <Label Text="AAA" />
+          </StackLayout>-->
         </DataTemplate>
       </ctrls:Flip.ItemTemplate>
     </ctrls:Flip>
