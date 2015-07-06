@@ -23,6 +23,11 @@ namespace FlipView.Droid.Renders {
 
         private LinearLayout Container = null;
         private LinearLayout PointsContainer = null;
+        private HorizontalScrollView Scroller = null;
+
+        private int RenderWidth = 0;
+
+        private static readonly Color DefaultPointColor = Color.Gray;
 
         private int PrevX = 0;
         private int Count = 0;
@@ -48,15 +53,15 @@ namespace FlipView.Droid.Renders {
             var root = new Android.Widget.RelativeLayout(this.Context);
             root.SetBackgroundColor(Color.Yellow.ToAndroid());
 
-            var scroller = new HorizontalScrollView(this.Context);
-            root.AddView(scroller, new Android.Widget.RelativeLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent));
-            scroller.SetBackgroundColor(Color.Green.ToAndroid());
+            this.Scroller = new HorizontalScrollView(this.Context);
+            root.AddView(this.Scroller, new Android.Widget.RelativeLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent));
+            this.Scroller.SetBackgroundColor(Color.Green.ToAndroid());
 
             this.Container = new Android.Widget.LinearLayout(this.Context);
             this.Container.Orientation = Orientation.Horizontal;
 
-            scroller.AddView(this.Container);
-            scroller.Touch += scroller_Touch;
+            this.Scroller.AddView(this.Container);
+            this.Scroller.Touch += scroller_Touch;
 
             this.PointsContainer = new LinearLayout(this.Context);
             this.PointsContainer.Orientation = Orientation.Horizontal;
@@ -82,23 +87,26 @@ namespace FlipView.Droid.Renders {
                     break;
                 case MotionEventActions.Up:
                     var delta = scroller.ScrollX - PrevX;
+                    if (delta == 0)
+                        return;
+
+                    this.SetPointColor(this.Idx, Color.Gray);
                     Idx += delta < 0 ? -1 : 1;
+                    this.SetPointColor(this.Idx, Color.White);
 
                     this.Snap();
                     break;
             }
         }
 
-        //Î´Ö´ÐÐ
-        //public override SizeRequest GetDesiredSize(int widthConstraint, int heightConstraint) {
-        //    this.Measure(widthConstraint, heightConstraint);
-        //    var w = this.MeasuredWidth;
-        //    return base.GetDesiredSize(widthConstraint, heightConstraint);
-        //}
+        protected override void OnSizeChanged(int w, int h, int oldw, int oldh) {
+            base.OnSizeChanged(w, h, oldw, oldh);
+            this.RenderWidth = w;
+        }
 
 
         private void Snap() {
-            Console.WriteLine(this.Idx);
+            this.Scroller.ScrollTo(this.RenderWidth * this.Idx, 0);
         }
 
         private void SetItems(int width, int height) {
@@ -124,6 +132,7 @@ namespace FlipView.Droid.Renders {
             if (changed) {
                 this.SetItems(r, b);
                 this.SetPoints();
+                this.SetPointColor(0, Color.White);
             }
         }
 
@@ -135,13 +144,23 @@ namespace FlipView.Droid.Renders {
             var shape = new OvalShape();
             shape.Resize(10, 10);
             var dr = new ShapeDrawable(shape);
-            dr.Paint.Color = Color.White.ToAndroid();
+            dr.Paint.Color = DefaultPointColor.ToAndroid();
 
             for (var i = 0; i < this.Count; i++) {
                 var v = new Android.Views.View(this.Context);
                 v.SetBackgroundDrawable(dr);
 
                 this.PointsContainer.AddView(v, lp);
+            }
+        }
+
+        private void SetPointColor(int idx, Color? color = null) {
+            var point = this.PointsContainer.GetChildAt(idx);
+            if (point != null) {
+                var shape = new OvalShape();
+                var dr = new ShapeDrawable(shape);
+                dr.Paint.Color = (color ?? DefaultPointColor).ToAndroid();
+                point.SetBackgroundDrawable(dr);
             }
         }
     }

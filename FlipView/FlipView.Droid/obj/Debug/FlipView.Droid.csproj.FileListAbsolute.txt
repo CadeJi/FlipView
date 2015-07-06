@@ -26,7 +26,6 @@ D:\NET\Xamarin\FlipView\FlipView\FlipView.Droid\obj\Debug\R.cs.flag
 D:\NET\Xamarin\FlipView\FlipView\FlipView.Droid\obj\Debug\uploadflags.txt
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.Droid.dll
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.Droid.pdb
-D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.Droid.dll.mdb
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.Droid.apk
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.Droid-Signed.apk
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.dll

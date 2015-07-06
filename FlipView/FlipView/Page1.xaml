@@ -10,15 +10,14 @@
     <ctrls:Flip ItemsSource="{Binding Imgs}" HeightRequest="200">
       <ctrls:Flip.ItemTemplate>
         <DataTemplate>
-          <!--<Image Source="{Binding .}" Aspect="AspectFill" />-->
           <Grid>
-            <Image Source="{Binding Key}" Aspect="AspectFill" />
-            <Label Text="{Binding Value}" TextColor="White" />
+            <Grid.RowDefinitions>
+              <RowDefinition />
+              <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Image Source="{Binding Key}" Grid.RowSpan="2" Aspect="AspectFill" />
+            <Label Text="{Binding Value}" Grid.Row="1" BackgroundColor="#333333" Opacity="0.5" TextColor="White" />
           </Grid>
-          <!--<StackLayout>
-            <Image Source="{Binding .}" Aspect="AspectFill" />
-            <Label Text="AAA" />
-          </StackLayout>-->
         </DataTemplate>
       </ctrls:Flip.ItemTemplate>
     </ctrls:Flip>

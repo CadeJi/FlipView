@@ -62,6 +62,7 @@ namespace FlipView.Controls {
                 var view = (View)this.ItemTemplate.CreateContent();
                 view.BindingContext = o;
                 children.Add(view);
+                view.Parent = this;///Must , 如果不设置 Parent , 如果是 StackLayout , 不会显示
             }
 
             this.Children = children;
