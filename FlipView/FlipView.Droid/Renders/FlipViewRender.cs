@@ -56,6 +56,7 @@ namespace FlipView.Droid.Renders {
             this.Scroller = new HorizontalScrollView(this.Context);
             root.AddView(this.Scroller, new Android.Widget.RelativeLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent));
             this.Scroller.SetBackgroundColor(Color.Green.ToAndroid());
+            this.Scroller.HorizontalScrollBarEnabled = false;
 
             this.Container = new Android.Widget.LinearLayout(this.Context);
             this.Container.Orientation = Orientation.Horizontal;
