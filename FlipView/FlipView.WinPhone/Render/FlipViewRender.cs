@@ -23,37 +23,20 @@ namespace FlipView.WinPhone.Render {
             var fv = new Controls.FlipView();
 
             fv.Orientation = System.Windows.Controls.Orientation.Horizontal;
-            //fv.ItemsSource = this.Element.ItemsSource;
             fv.ItemsSource = this.Element.Children;
-            //fv.Height = this.Element.HeightRequest;
-            //fv.Width = this.Element.WidthRequest;
-
-            //fv.ItemTemplate = (System.Windows.DataTemplate)System.Windows.Application.Current.Resources["FlipViewItem"];
-
             this.SetNativeControl(fv);
         }
 
         protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e) {
             base.OnElementPropertyChanged(sender, e);
 
-            Debug.WriteLine(e.PropertyName);
+            //Debug.WriteLine(e.PropertyName);
 
-            switch (e.PropertyName) {
-                case "Width":
-                    this.Control.Width = this.Element.Width;
-                    break;
-                case "Height":
-                    this.Control.Height = this.Element.Height;
-                    break;
-                case "Orientation":
-                    this.Control.Orientation = (System.Windows.Controls.Orientation)((int)this.Element.Orientation);
-                    break;
-            }
+            //switch (e.PropertyName) {
+            //    case "Orientation":
+            //        this.Control.Orientation = (System.Windows.Controls.Orientation)((int)this.Element.Orientation);
+            //        break;
+            //}
         }
-
-        public override SizeRequest GetDesiredSize(double widthConstraint, double heightConstraint) {
-            return base.GetDesiredSize(widthConstraint, heightConstraint);
-        }
-
     }
 }
