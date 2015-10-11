@@ -88,7 +88,8 @@ namespace FlipView.Droid.Renders {
 
             for (var i = 0; i < this.Count; i++) {
                 var v = new AV.View(this.Context);
-                v.SetBackgroundDrawable(dr);
+                //v.SetBackgroundDrawable(dr);
+                v.Background = dr;
 
                 this.PointsContainer.AddView(v, lp);
             }
@@ -100,7 +101,8 @@ namespace FlipView.Droid.Renders {
                 var shape = new OvalShape();
                 var dr = new ShapeDrawable(shape);
                 dr.Paint.Color = (color ?? DefaultPointColor).ToAndroid();
-                point.SetBackgroundDrawable(dr);
+                //point.SetBackgroundDrawable(dr);
+                point.Background = dr;
             }
             this.LastPos = idx;
         }

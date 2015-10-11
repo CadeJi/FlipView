@@ -191,7 +191,7 @@ namespace AbsoluteLayoutDemo
 ]]></code>
                 </example>
                 <para>The <see cref="T:Xamarin.Forms.AbsoluteLayout" /> class can lay its child elements out in proportional units, device units, or a combination of both. Application developers should remember the following points when specifying a <see cref="T:Xamarin.Forms.Rectangle" /> structure that will define the layout bounds of a child element:
-        <list type="bullet"><item><term>For elements whose height and width fit on the screen, proportional position dimensions in the range [0,1] represent elements that are completely on the screen, regardless of whether the height, width, or both are specified in device or proportional units.</term></item><item><term>The above point means that, to specify an element in the lower right hand corner of the screen and that is half as wide and half as all as the screen, with a  <see cref="T:Xamarin.Forms.LayoutFlags" /> value of <c>All</c>, the application developer would specify "0.1, 0.1, 0.5, 0.5".</term></item><item><term>The app developer can inadvertently cause child elements for which one or both size dimensions were specified proportionally to be displayed partially off the screen, or hidden altogether, by specifying device-unit positions that do not leave enough room for the calculated size of the child.</term></item><item><term>Each part of the bounding <see cref="T:Xamarin.Forms.Rectangle" /> structure is interpreted according to the <see cref="T:Xamarin.Forms.LayoutFlags" /> value that controls it. A given rectangle might, for example, have an X-coordinate that is in device units, a Y-coordinate that is in proportional units, a height that is in proportional units, and a width that is in device units, or any other combination of device and proportional units. </term></item><item><term>Rectangles that, when interpreted by using the current <see cref="T:Xamarin.Forms.LayoutFlags" /> set on the child, represent bounding boxes that are partially or wholly off-screen—for example, by having a width that is larger than the screen width—may give unexpected results.</term></item></list></para>
+        <list type="bullet"><item><term>For elements whose height and width fit on the screen, proportional position dimensions in the range [0,1] represent elements that are completely on the screen, regardless of whether the height, width, or both are specified in device or proportional units.</term></item><item><term>The above point means that, to specify an element in the lower right hand corner of the screen and that is half as wide and half as all as the screen, with a  <see cref="T:Xamarin.Forms.LayoutFlags" /> value of <c>All</c>, the application developer would specify "1.0, 1.0, 0.5, 0.5".</term></item><item><term>The app developer can inadvertently cause child elements for which one or both size dimensions were specified proportionally to be displayed partially off the screen, or hidden altogether, by specifying device-unit positions that do not leave enough room for the calculated size of the child.</term></item><item><term>Each part of the bounding <see cref="T:Xamarin.Forms.Rectangle" /> structure is interpreted according to the <see cref="T:Xamarin.Forms.LayoutFlags" /> value that controls it. A given rectangle might, for example, have an X-coordinate that is in device units, a Y-coordinate that is in proportional units, a height that is in proportional units, and a width that is in device units, or any other combination of device and proportional units. </term></item><item><term>Rectangles that, when interpreted by using the current <see cref="T:Xamarin.Forms.LayoutFlags" /> set on the child, represent bounding boxes that are partially or wholly off-screen—for example, by having a width that is larger than the screen width—may give unexpected results.</term></item></list></para>
             </remarks>
         </member>
         <member name="C:Xamarin.Forms.AbsoluteLayout">
@@ -3816,14 +3816,14 @@ var secondFetch = DependencyService.Get<IDependencyTest> (DependencyFetchTarget.
             <remarks>To be added.</remarks>
         </member>
         <member name="T:Xamarin.Forms.Device">
-            <summary>An utility class to interract with the current Device/Platform.</summary>
+            <summary>A utility class to interact with the current Device/Platform.</summary>
             <remarks />
         </member>
         <member name="M:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)">
             <param name="action">The Action to invoke </param>
             <summary>Invokes an Action on the device main (UI) thread.</summary>
             <remarks>
-                <para>This example show how to set the Text of Label on the main thread, e.g. in response to an async event.
+                <para>This example shows how to set the Text of Label on the main thread, e.g. in response to an async event.
           </para>
                 <example>
                     <code lang="C#"><![CDATA[
@@ -3849,8 +3849,8 @@ Device.BeginInvokeOnMainThread (() => {
             <remarks>To be added.</remarks>
         </member>
         <member name="P:Xamarin.Forms.Device.Idiom">
-            <summary>Gets the kind of device Forms is currently working on.</summary>
-            <value>A <see cref="T:Xamarin.Forms.TargetIdiom" /> representing the device type.</value>
+            <summary>Gets the kind of device that Xamarin.Forms is currently working on.</summary>
+            <value>A <see cref="T:Xamarin.Forms.TargetIdiom" /> that represents the device type.</value>
             <remarks />
         </member>
         <member name="M:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)">
@@ -3858,9 +3858,9 @@ Device.BeginInvokeOnMainThread (() => {
             <param name="Android">(optional) The Action to execute on Android.</param>
             <param name="WinPhone">(optional) The Action to execute on WinPhone.</param>
             <param name="Default">(optional) The Action to execute if no Action was provided for the current OS.</param>
-            <summary>Executes different Actions depending on the <see cref="T:Xamarin.QcuikUI.TargetOS" /> Forms is working on.</summary>
+            <summary>Executes different Actions depending on the <see cref="T:Xamarin.QcuikUI.TargetOS" /> that Xamarin.Forms is working on.</summary>
             <remarks>
-                <para>This example show how to change the font of a Label on a single OS.
+                <para>This example shows how to change the font of a Label on a single OS.
           </para>
                 <example>
                     <code lang="C#"><![CDATA[
@@ -3874,10 +3874,10 @@ Device.OnPlatform (iOS: () => label.Font = Font.OfSize ("HelveticaNeue-UltraLigh
             <param name="iOS">The value for iOS.</param>
             <param name="Android">The value for Android.</param>
             <param name="WinPhone">The value for WinPhone.</param>
-            <summary>Returns different values depending on the <see cref="T:Xamarin.Forms.TargetOS" /> Forms is working on.</summary>
+            <summary>Returns different values depending on the <see cref="T:Xamarin.Forms.TargetOS" /> Xamarin.Forms is working on.</summary>
             <returns>The value for the current OS.</returns>
             <remarks>
-                <para>This example show how to use different heights for a Button on different OS.
+                <para>This example shows how to use different heights for a Button on different OS.
           </para>
                 <example>
                     <code lang="C#"><![CDATA[
@@ -3892,15 +3892,15 @@ button.HeightRequest = Device.OnPlatform (20,30,30);
             <remarks>This often navigates out of the application.</remarks>
         </member>
         <member name="P:Xamarin.Forms.Device.OS">
-            <summary>Gets the <see cref="Xamarin.Forms.TargetPlatform" /> indicating the OS Forms is working on.</summary>
-            <value>A <see cref="Xamarin.Forms.TargetPlatform" /> indicating the current OS.</value>
+            <summary>Gets the <see cref="Xamarin.Forms.TargetPlatform" /> indicating the OS Xamarin.Forms is working on.</summary>
+            <value>A <see cref="Xamarin.Forms.TargetPlatform" /> that indicates the current OS.</value>
             <remarks />
         </member>
         <member name="M:Xamarin.Forms.Device.StartTimer(System.TimeSpan,System.Func{System.Boolean})">
             <param name="interval">The interval between invocations of the callback.</param>
             <param name="callback">The action to run when the timer elapses.</param>
             <summary>Starts a recurring timer using the device clock capabilities.</summary>
-            <remarks>While the callback returns <see langword="true" /> the timer will keep recurring.</remarks>
+            <remarks>While the callback returns <see langword="true" />, the timer will keep recurring.</remarks>
         </member>
         <member name="T:Xamarin.Forms.Device+Styles">
             <summary>Class that exposes device-specific styles as static fields.</summary>
@@ -5480,6 +5480,10 @@ namespace FormsGallery
             <summary>Method that is called when a child is added to this <see cref="T:Xamarin.Forms.Grid" /> element.</summary>
             <remarks />
         </member>
+        <member name="M:Xamarin.Forms.Grid.OnBindingContextChanged">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="M:Xamarin.Forms.Grid.OnRemoved(Xamarin.Forms.View)">
             <param name="view">The element that was removed.</param>
             <summary>Method that is called when a child is removed from this <see cref="T:Xamarin.Forms.Grid" /> element.</summary>
@@ -5706,6 +5710,11 @@ namespace FormsGallery
             <summary>Casting operator to convert a double into a GridLength of type GridUnitType.Absolute</summary>
             <returns>A GridLength of type GridUnitType.Absolute and of size absolutesize</returns>
             <remarks />
+        </member>
+        <member name="M:Xamarin.Forms.GridLength.ToString">
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
         </member>
         <member name="P:Xamarin.Forms.GridLength.Value">
             <summary>Gets the Value of the GridLength.</summary>
@@ -13335,7 +13344,7 @@ var beeroclock = new TimePicker () { Time = new TimeSpan (17,0,0) };
             </remarks>
         </member>
         <member name="F:Xamarin.Forms.VisualElement.IsEnabledProperty">
-            <summary>Identifies the InputTransparent bindable property.</summary>
+            <summary>Identifies the IsEnabled bindable property.</summary>
             <remarks />
         </member>
         <member name="P:Xamarin.Forms.VisualElement.IsFocused">
