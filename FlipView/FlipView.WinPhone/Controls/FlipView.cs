@@ -72,6 +72,8 @@ namespace FlipView.WinPhone.Controls {
         }
 
         public override void OnApplyTemplate() {
+            if (this.Template == null)
+                return;
             base.OnApplyTemplate();
 
             var sv = (ScrollViewer)this.GetTemplateChild(SV);
