@@ -13,3 +13,4 @@ D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\obj\iPhone\Debug\FlipView.iOS.cspr
 D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\obj\iPhone\Debug\FlipViewiOS.exe
 D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\obj\iPhone\Debug\FlipViewiOS.pdb
 D:\NET\Xamarin\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\FlipView.dll.mdb
+D:\NET\FlipView\FlipView\FlipView.iOS\bin\iPhone\Debug\Xamarin.Forms.Core.dll

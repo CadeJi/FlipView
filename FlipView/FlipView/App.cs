@@ -24,7 +24,7 @@ namespace FlipView {
             //    }
             //};
 
-            this.MainPage = new Page1();
+            this.MainPage = new NavigationPage(new Page2());
         }
 
         protected override void OnStart() {

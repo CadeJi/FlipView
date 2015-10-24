@@ -18,9 +18,9 @@ namespace FlipView {
             InitializeComponent();
 
             this.Imgs = new Dictionary<string, string>(){
-                {"http://imgsrc.baidu.com/baike/pic/item/6609c93d70cf3bc7e43db93dd500baa1cd112a25.jpg","苍井空"},
                 {"http://photocdn.sohu.com/20130528/Img377307672.jpg","小泽玛利亚"},
-                {"http://news.youth.cn/yl/201406/W020140619035008418634.jpg","吉泽明步"}
+                {"http://news.youth.cn/yl/201406/W020140619035008418634.jpg","吉泽明步"},
+                {"http://imgsrc.baidu.com/baike/pic/item/6609c93d70cf3bc7e43db93dd500baa1cd112a25.jpg","苍井空"}
             };
 
 

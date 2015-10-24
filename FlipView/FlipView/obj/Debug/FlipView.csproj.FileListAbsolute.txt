@@ -20,3 +20,4 @@ D:\NET\FlipView\FlipView\FlipView\obj\Debug\FlipView.Page1.xaml.g.cs
 D:\NET\FlipView\FlipView\FlipView\obj\Debug\FlipView.dll
 D:\NET\FlipView\FlipView\FlipView\obj\Debug\FlipView.pdb
 D:\NET\FlipView\FlipView\FlipView\obj\Debug\FlipView.csprojResolveAssemblyReference.cache
+D:\NET\FlipView\FlipView\FlipView\obj\Debug\FlipView.Page2.xaml.g.cs

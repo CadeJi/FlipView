@@ -7,7 +7,7 @@
 
   <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
-    <ctrls:Flip ItemsSource="{Binding Imgs}" HeightRequest="400">
+    <ctrls:Flip ItemsSource="{Binding Imgs}" HeightRequest="300">
       <ctrls:Flip.ItemTemplate>
         <DataTemplate>
           <Grid>
@@ -16,7 +16,7 @@
               <RowDefinition Height="30" />
             </Grid.RowDefinitions>
             <Image Source="{Binding Key}" Grid.RowSpan="2" Aspect="AspectFill" />
-            <Label Text="{Binding Value}" Grid.Row="1" BackgroundColor="#333333" Opacity="0.5" TextColor="White" />
+            <Label Text="{Binding Value}" Grid.Row="1" BackgroundColor="#333333" Opacity="0.5" TextColor="White" VerticalOptions="Center" />
           </Grid>
         </DataTemplate>
       </ctrls:Flip.ItemTemplate>
