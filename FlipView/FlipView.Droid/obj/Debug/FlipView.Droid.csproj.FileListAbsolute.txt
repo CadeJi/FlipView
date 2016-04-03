@@ -24,7 +24,6 @@ D:\NET\Xamarin\FlipView\FlipView\FlipView.Droid\obj\Debug\res\drawable-xhdpi\ico
 D:\NET\Xamarin\FlipView\FlipView\FlipView.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
 D:\NET\Xamarin\FlipView\FlipView\FlipView.Droid\obj\Debug\R.cs.flag
 D:\NET\Xamarin\FlipView\FlipView\FlipView.Droid\obj\Debug\uploadflags.txt
-D:\NET\FlipView\FlipView\FlipView.Droid\obj\Debug\FlipView.Droid.csprojResolveAssemblyReference.cache
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.Droid.dll
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.Droid.pdb
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.Droid.apk
@@ -37,9 +36,9 @@ D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\Xamarin.Forms.Platform.Android
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\Xamarin.Forms.Platform.dll
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.pdb
-D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.dll.mdb
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\Xamarin.Forms.Core.xml
 D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\NET\FlipView\FlipView\FlipView.Droid\obj\Debug\FlipView.Droid.csprojResolveAssemblyReference.cache
 D:\NET\FlipView\FlipView\FlipView.Droid\obj\Debug\FlipView.Droid.dll
 D:\NET\FlipView\FlipView\FlipView.Droid\obj\Debug\FlipView.Droid.pdb
 D:\NET\FlipView\FlipView\FlipView.Droid\obj\Debug\android\bin\FlipView.Droid.apk
@@ -49,3 +48,5 @@ D:\NET\FlipView\FlipView\FlipView.Droid\obj\Debug\res\drawable-xhdpi\icon.png
 D:\NET\FlipView\FlipView\FlipView.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
 D:\NET\FlipView\FlipView\FlipView.Droid\obj\Debug\R.cs.flag
 D:\NET\FlipView\FlipView\FlipView.Droid\obj\Debug\uploadflags.txt
+D:\NET\FlipView\FlipView\FlipView.Droid\obj\Debug\FlipView.Droid.dll.mdb
+D:\NET\FlipView\FlipView\FlipView.Droid\bin\Debug\FlipView.Droid.dll.mdb

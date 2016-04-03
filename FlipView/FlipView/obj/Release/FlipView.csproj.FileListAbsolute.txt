@@ -1,0 +1,11 @@
+D:\NET\FlipView\FlipView\FlipView\bin\Release\FlipView.dll
+D:\NET\FlipView\FlipView\FlipView\bin\Release\FlipView.pdb
+D:\NET\FlipView\FlipView\FlipView\bin\Release\Xamarin.Forms.Core.dll
+D:\NET\FlipView\FlipView\FlipView\bin\Release\Xamarin.Forms.Platform.dll
+D:\NET\FlipView\FlipView\FlipView\bin\Release\Xamarin.Forms.Xaml.dll
+D:\NET\FlipView\FlipView\FlipView\bin\Release\Xamarin.Forms.Core.xml
+D:\NET\FlipView\FlipView\FlipView\bin\Release\Xamarin.Forms.Xaml.xml
+D:\NET\FlipView\FlipView\FlipView\obj\Release\FlipView.Page1.xaml.g.cs
+D:\NET\FlipView\FlipView\FlipView\obj\Release\FlipView.Page2.xaml.g.cs
+D:\NET\FlipView\FlipView\FlipView\obj\Release\FlipView.dll
+D:\NET\FlipView\FlipView\FlipView\obj\Release\FlipView.pdb
