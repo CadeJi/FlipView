@@ -40,11 +40,8 @@ namespace FlipView.Droid.Renders {
             root.SetBackgroundColor(Color.Green.ToAndroid());
             this.VP = new ViewPager(this.Context);
             this.VP.PageSelected += VP_PageSelected;
-
             //如果传入的 items 是 IEnumerable 类型的 (未ToList) , 会一直去计算那个 IEnumerable , 可断点到 GetChildrenViews 里, 会一直在那里执行, 从而导致子视图不显示
-            var adapter = new FlipViewAdapter(this.VP, this.GetChildrenViews().ToList());
-            this.VP.Adapter = adapter;
-            this.VP.AddOnPageChangeListener(adapter);
+            this.VP.Adapter = new FlipViewAdapter(this.Context, this.GetChildrenViews().ToList());
             root.AddView(this.VP, LayoutParams.MatchParent, LayoutParams.MatchParent);
 
             this.PointsContainer = new LinearLayout(this.Context);
@@ -61,17 +58,6 @@ namespace FlipView.Droid.Renders {
 
             root.Invalidate();
             root.RequestLayout();
-
-            this.Element.NextRequired += Element_NextRequired;
-        }
-
-        private void Element_NextRequired(object sender, EventArgs e) {
-            Device.BeginInvokeOnMainThread(() => {
-                //this.VP.CurrentItem++;
-                //var pos = this.VP.CurrentItem + 1;
-                //this.VP.SetCurrentItem(pos, false);
-                ((FlipViewAdapter)this.VP.Adapter).Next();
-            });
         }
 
         private void VP_PageSelected(object sender, ViewPager.PageSelectedEventArgs e) {

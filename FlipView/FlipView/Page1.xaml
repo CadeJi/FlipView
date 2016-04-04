@@ -7,18 +7,16 @@
 
   <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 
-    <ctrls:Flip ItemsSource="{Binding Imgs}" HeightRequest="300" AutoPlay="False" Interval="2000">
+    <ctrls:Flip ItemsSource="{Binding Imgs}" HeightRequest="300">
       <ctrls:Flip.ItemTemplate>
         <DataTemplate>
           <Grid>
             <Grid.RowDefinitions>
               <RowDefinition />
-              <RowDefinition Height="auto" />
+              <RowDefinition Height="30" />
             </Grid.RowDefinitions>
             <Image Source="{Binding Key}" Grid.RowSpan="2" Aspect="AspectFill" />
-            <StackLayout BackgroundColor="#333333" Opacity="0.5" Grid.Row="1" HeightRequest="30">
-              <Label Text="{Binding Value}"  TextColor="White" VerticalOptions="CenterAndExpand" />
-            </StackLayout>
+            <Label Text="{Binding Value}" Grid.Row="1" BackgroundColor="#333333" Opacity="0.5" TextColor="White" VerticalOptions="Center" />
           </Grid>
         </DataTemplate>
       </ctrls:Flip.ItemTemplate>

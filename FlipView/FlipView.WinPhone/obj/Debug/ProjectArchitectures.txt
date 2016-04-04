@@ -1,2 +1,0 @@
-D:\NET\FlipView\FlipView\FlipView.WinPhone\FlipView.WinPhone.csproj;neutral
-D:\NET\FlipView\FlipView\FlipView\FlipView.csproj;neutral
