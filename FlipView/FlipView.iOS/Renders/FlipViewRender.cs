@@ -24,8 +24,15 @@ namespace FlipView.iOS.Renders {
             this.SetNativeControl(fv);
             this.Control.SizeToFit();
             this.AddSubview(this.Control.PageControl);
+
+            this.Element.NextRequired += Element_NextRequired;
         }
 
+        private void Element_NextRequired(object sender, EventArgs e) {
+            Device.BeginInvokeOnMainThread(() => {
+                this.Control.Next();
+            });
+        }
 
         private IEnumerable<UIView> GetChildrenViews() {
             foreach (var v in this.Element.Children) {

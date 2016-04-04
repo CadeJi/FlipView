@@ -27,7 +27,7 @@ namespace FlipView.iOS.Controls {
         }
 
         void Initialize() {
-            BackgroundColor = UIColor.Red;
+            //BackgroundColor = UIColor.Red;
         }
 
         private void SetUp() {
@@ -57,7 +57,8 @@ namespace FlipView.iOS.Controls {
         public void SetItems(List<UIView> items) {
             if (items == null || items.Count == 0) {
 
-            } else {
+            }
+            else {
                 for (var i = 0; i < items.Count; i++) {
                     var v = new UIView();
                     var item = items[i];
@@ -89,6 +90,14 @@ namespace FlipView.iOS.Controls {
             }
 
             this.ContentSize = new CGSize(w * this.Views.Count, h);
+        }
+
+        public void Next() {
+            var offset = this.ContentOffset;
+            offset.X += this.Frame.Size.Width;
+            if (offset.X >= this.ContentSize.Width)
+                offset.X = 0;
+            this.SetContentOffset(offset, true);
         }
     }
 }
